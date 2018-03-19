@@ -1,5 +1,5 @@
-var PORT = 1000;
-var HOST = '192.168.178.36';
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 4040
+var ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '192.168.178.36';
 
 var dgram = require('dgram');
 var server = dgram.createSocket('udp4');
